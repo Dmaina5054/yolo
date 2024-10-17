@@ -13,6 +13,9 @@ RUN npm install
 #copying rest of the code
 COPY . .
 
+#fix for error:0308010C:digital envelope routines::unsupported
+# Add the OpenSSL legacy provider flag to resolve crypto issues
+ENV NODE_OPTIONS=--openssl-legacy-provider
 #build for react production
 RUN npm run build 
 
