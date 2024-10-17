@@ -13,6 +13,7 @@ services:
       - yolo-network
     depends_on:
       - backend
+    image: bugtwent/yolofrontent:1.0.0
 
   backend:
     build:
@@ -27,6 +28,7 @@ services:
       - yolo-network
     depends_on:
       - mongo
+    
     
 
   mongo:
