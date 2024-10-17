@@ -28,6 +28,7 @@ services:
       - yolo-network
     depends_on:
       - mongo
+    image: bugtwent/yolobackend:1.0.0
     
     
 
