@@ -16,6 +16,8 @@ COPY . .
 #build for react production
 RUN npm run build 
 
+#STAGE 2
+
 #use node:alpine image to server app
 FROM node:alpine 
 
