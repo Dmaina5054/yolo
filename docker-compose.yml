@@ -9,6 +9,8 @@ services:
       - "3000:3000" # Expose the frontend on port 3000
     environment:
       - NODE_OPTIONS=--openssl-legacy-provider
+    networks:
+      - yolo-network
     depends_on:
       - backend
 
@@ -21,10 +23,11 @@ services:
     environment:
       NODE_ENV: production
       MONGO_URL: mongodb://mongo:27017/yolomy # MongoDB connection URL
+    networks:
+      - yolo-network
     depends_on:
       - mongo
-    # volumes:
-    #   - ./backend:/app # Map backend code for development
+    
 
   mongo:
     image: mongo:latest
@@ -32,6 +35,15 @@ services:
       - "27017:27017" # Expose MongoDB on default port
     volumes:
       - mongo-data:/data/db # Persist MongoDB data
+    networks:
+      - yolo-network
 
+#defining custom bridge network
+networks:
+  yolo-network:
+    driver: bridge
+
+
+#volume for mongodb persistence
 volumes:
   mongo-data:
