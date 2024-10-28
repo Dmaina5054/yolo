@@ -1,0 +1,5 @@
+---
+# tasks file for admin_server_provisioner
+- name: Update system 
+  apt:
+    update_cache: true
