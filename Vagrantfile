@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   
   # Provisioning Ansible on vagrant guest
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "ansible/playbook.yml"
+    ansible.playbook = "ansible/playbook.yaml"
   end
 
 end

@@ -7,10 +7,10 @@
 #will setup backend service
 - hosts: backendserver
   roles:
-    - backend_service_provisioner
-    - frontend_service_provisioner
+    - backend_server_provisioner
+ 
 
 #will setup frontend service  
 - hosts: frontendserver 
   roles:
-    - frontend_service_provisioner
+    - frontend_server_provisioner
