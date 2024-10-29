@@ -62,9 +62,18 @@
     name: docker
     state: restarted
 
-- name: Clone code reporitory
+- name: Ensure destination directory for git cloned repo exists
+  file:
+    path: "{{ git_clone_directory }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Clone code repository
   git:
     repo: "{{ github_repo_url }}"
-    dest: ~/
+    dest: "{{ git_clone_directory }}"
+    version: "master"
     accept_hostkey: yes
     key_file: "{{ key_file_location }}"

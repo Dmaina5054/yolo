@@ -1,2 +1,5 @@
 ---
 # defaults file for frontend_server_provisioner
+github_repo_url: "https://github.com/Dmaina5054/yolo"
+key_file_location: "/home/vagrant/.ssh/id_ed25519"
+git_clone_directory: "/home/vagrant/yolo"
