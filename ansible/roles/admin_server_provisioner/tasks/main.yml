@@ -75,6 +75,8 @@
     repo: "{{ github_repo_url }}"
     dest: "{{ git_clone_directory }}"
     version: "master"
+    force: yes
+    update: yes
     accept_hostkey: yes
     key_file: "{{ key_file_location }}"
 
