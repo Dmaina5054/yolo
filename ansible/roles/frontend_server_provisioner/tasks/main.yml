@@ -1,2 +1,17 @@
 ---
 # tasks file for frontend_server_provisioner
+- name: Navigate to the project directory and build the Docker image
+  command: docker build -t backend_image .
+  become: true
+  args:
+    chdir: /home/vagrant/yolo/client
+
+- name: Run the Docker container
+  become: true
+  docker_container:
+    name: backend_container
+    image: backend_image
+    state: started
+    restart_policy: always
+    ports:
+      - "3000:3000"
