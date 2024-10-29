@@ -1,0 +1,20 @@
+---
+# tasks file for mongodb_server_provisioner
+- name: Ensure the Docker volume for MongoDB data exists
+  become: true
+  docker_volume:
+    volume_name: mongo-data
+    state: present
+
+
+- name: Run MongoDB container
+  become: true
+  docker_container:
+    name: mongodb
+    image: mongo:latest
+    state: started
+    restart_policy: always
+    published_ports:
+    - "27017:27017"  
+    volumes:
+      - mongo-data:/data/db  

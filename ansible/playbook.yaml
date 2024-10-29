@@ -14,3 +14,8 @@
 - hosts: frontendserver 
   roles:
     - frontend_server_provisioner
+
+#will setup mongodb service
+- hosts: mongodbserver 
+  roles:
+    - mongodb_server_provisioner

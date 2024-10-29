@@ -77,3 +77,4 @@
     version: "master"
     accept_hostkey: yes
     key_file: "{{ key_file_location }}"
+
