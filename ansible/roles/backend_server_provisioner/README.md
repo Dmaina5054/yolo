@@ -1,7 +1,8 @@
 Role Name
 =========
-
-A brief description of the role goes here.
+This role will
+- Build a backend container
+- Run the docker container
 
 Requirements
 ------------
@@ -11,7 +12,9 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- github_repo_url: "https://github.com/Dmaina5054/yolo"
+- key_file_location: "/home/vagrant/.ssh/id_ed25519"
+- git_clone_directory: "/home/vagrant/yolo"
 
 Dependencies
 ------------

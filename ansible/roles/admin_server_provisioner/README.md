@@ -1,17 +1,25 @@
 Role Name
 =========
-
-A brief description of the role goes here.
+This role will 
+- install dependencies that are common between vms
+- clone code repository for all guests
+- setup docker and docker compose for all guests
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- docker_compose_version: "1.29.2"
+- docker_user: "docker"
+- vagrant_user: "ansible"
+- min_ansible_version: "2.29.7"
+- github_repo_url: "https://github.com/Dmaina5054/yolo"
+- key_file_location: "/home/vagrant/.ssh/id_ed25519"
+- git_clone_directory: "/home/vagrant/yolo"
 
 Dependencies
 ------------
