@@ -61,3 +61,10 @@
   service:
     name: docker
     state: restarted
+
+- name: Clone code reporitory
+  git:
+    repo: "{{ github_repo_url }}"
+    dest: ~/
+    accept_hostkey: yes
+    key_file: "{{ key_file_location }}"

@@ -1,2 +1,7 @@
 ---
 # tasks file for backend_server_provisioner
+- name: Clone code from repository
+  ansible.builtin.git:
+    repo: "{{ github_repo_url }}"
+    single_branch: yes
+    version: 
