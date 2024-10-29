@@ -1,0 +1,12 @@
+Log created: 2024-10-29T17:07:29.589557000Z
+Process ID:  324810 (0x4f4ca)
+Parent PID:  4522 (0x11aa)
+Executable:  /usr/lib/virtualbox/VBoxHeadless
+Arg[0]: /usr/lib/virtualbox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: yolo_mongodbserver_1730149707291_50743
+Arg[3]: --startvm
+Arg[4]: 8f11c1a4-0931-4438-9d65-962c43ca7002
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2
