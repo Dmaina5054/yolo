@@ -17,3 +17,6 @@ spec:
           image: docker.io/bugtwent/yolobackend:1.0.0
           ports:
             - containerPort: 5000
+          env:
+          - name: MONGODB_URL
+            value: "mongodb://mongodb.default.svc.cluster.local:27017"
