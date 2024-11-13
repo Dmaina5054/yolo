@@ -38,3 +38,8 @@
 
 
 ### `GKE Deployment`
+Choice of the Kubernetes Objects used for deployment 
+- Deployment.yaml that contains deployment for the frontend, backend and mongodb as in the GKE folder. The deployments uses images pushed to docker hub
+Method used to expose your pods to internet traffic.
+- To expose the pods to internet traffic, i exposed the service with a LoadBalancer type for the frontend, backend and mongodb deployments
+Use-of or there-lack-of of persistent storage.
