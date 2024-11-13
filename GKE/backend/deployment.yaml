@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolobackend-deployment  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: yolobackend
+  template:
+    metadata:
+      labels:
+        run: yolobackend
+    spec:
+      containers:
+        - name: yolobackend
+          image: docker.io/bugtwent/yolobackend:1.0.0
+          ports:
+            - containerPort: 5000

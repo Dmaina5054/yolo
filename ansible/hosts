@@ -1,5 +1,5 @@
 [backendserver]
-192.168.56.10 ansible_ssh_private_key_file=/home/ahadi-daniel/Projects/moringa/ips/yolo/.vagrant/machines/backendserver/virtualbox/private_key
+10.14.1.241 ansible_ssh_private_key_file=/home/ahadi-daniel/Projects/moringa/ips/yolo/.vagrant/machines/backendserver/virtualbox/private_key
 
 [frontendserver]
 192.168.56.11 ansible_ssh_private_key_file=/home/ahadi-daniel/Projects/moringa/ips/yolo/.vagrant/machines/frontendserver/virtualbox/private_key

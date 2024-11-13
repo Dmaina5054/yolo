@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://192.168.56.10:5000",
+  "proxy": "yolobackend.default.svc.cluster.local:5000",
   "eslintConfig": {
     "extends": "react-app"
   },

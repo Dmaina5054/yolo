@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "backendserver" do |host1|
     host1.vm.box = "geerlingguy/ubuntu2004"
-    host1.vm.network "private_network", ip: "192.168.56.10"  # IP for backendserver
+    host1.vm.network "private_network", ip: "10.14.1.241"  # IP for backendserver
   end
 
   config.vm.define "frontendserver" do |host2|

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yolofrontend-deployment  # Choose a descriptive name
+spec:
+  replicas: 1  # Adjust the desired number of replicas
+  selector:
+    matchLabels:
+      run: yolofrontend
+  template:
+    metadata:
+      labels:
+        run: yolofrontend
+    spec:
+      containers:
+        - name: yolofrontend
+          image: docker.io/bugtwent/yolofrontent:1.0.0
+          ports:
+            - containerPort: 3000
