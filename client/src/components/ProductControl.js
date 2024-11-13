@@ -78,7 +78,7 @@ class ProductControl extends Component {
     }
     
     componentDidMount(){
-        axios.get('http://yolobackend.default.svc.cluster.local:5000/api/products')
+        axios.get('http://yolobackend:5000/api/products')
             .then(res =>{
                 console.log(res)
                 this.setState({
@@ -184,7 +184,7 @@ class ProductControl extends Component {
     }
     handleEditingProduct = (editedProduct) =>{
 
-        axios.put('http://yolobackend.default.svc.cluster.local:5000/api/products/' + this.state.selectedProduct._id, editedProduct)
+        axios.put('http://yolobackend:5000/api/products/' + this.state.selectedProduct._id, editedProduct)
             .then(res =>console.log(res.data))
         
         this.setState({
