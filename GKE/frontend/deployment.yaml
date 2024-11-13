@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: yolofrontend
-          image: docker.io/bugtwent/yolofrontent:1.0.0
+          image: docker.io/bugtwent/yolofrontent:1.0.1
           ports:
             - containerPort: 3000
