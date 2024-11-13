@@ -157,14 +157,14 @@ class ProductControl extends Component {
         //     console.log(pair[0]+ ', ' + pair[1]); 
         // }       
         // console.log(...formData)
-        axios.post('http://yolobackend.default.svc.cluster.local:5000/api/products', newProduct)
+        axios.post('http://yolobackend:5000/api/products', newProduct)
             .then(res => console.log(res.data))
         this.setState({
             formVisibleOnPage: false
         })
     };
     handleDeletingProduct = (id) =>{
-        axios.delete('http://yolobackend.default.svc.cluster.local:5000/api/products/'+id)
+        axios.delete('http://yolobackend:5000/api/products/'+id)
             .then(res => console.log(res.data))
             .catch((error) =>{
                 console.log(error)

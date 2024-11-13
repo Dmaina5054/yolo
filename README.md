@@ -35,3 +35,6 @@
 
 - `Ansible installed and configured (refer to official Ansible documentation for installation steps).`
 - `Python interpreter (version supported by your Ansible version).
+
+
+### `GKE Deployment`
