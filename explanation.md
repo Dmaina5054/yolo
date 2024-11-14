@@ -93,3 +93,17 @@ In the docker-compose.yml, the volume mongo-data is used to persist MongoDB data
 ## Docker hub image links
 https://hub.docker.com/repository/docker/bugtwent/yolobackend/general
 https://hub.docker.com/repository/docker/bugtwent/yolofrontent/general
+
+
+
+### `GKE Deployment`
+
+Choice of the Kubernetes Objects used for deployment 
+- Deployment.yaml that contains deployment for the frontend, backend and mongodb as in the GKE folder.
+- The deployments uses images pushed to docker hub
+
+Method used to expose your pods to internet traffic.
+- To expose the pods to internet traffic, i exposed the service with a LoadBalancer type for the frontend, backend and mongodb deployments
+
+Use-of or there-lack-of of persistent storage
+- Defined a PersistentVolumeClaim(PVC) with a 1G storage size, bound a PersistentVolume(PV) to the PVC and used the PVC in the mongodb deployment
